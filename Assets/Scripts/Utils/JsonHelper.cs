@@ -27,11 +27,11 @@ public static class JsonHelper {
 
     public static bool WriteJsonToFile(string json, string fileName)
     {
-        // if (File.Exists(SaveDirectory.Path + fileName + ".json"))
-        // {
-        // 	Debug.Log(fileName + " Exist");
-        // 	return false;
-        // }
+        if (File.Exists(SaveDirectory.Path + fileName + ".json"))
+        {
+        	Debug.Log(fileName + " Exist");
+        	return false;
+        }
         var file = File.CreateText(SaveDirectory.Path + fileName + ".json");
         file.Write(json);
         file.Close();

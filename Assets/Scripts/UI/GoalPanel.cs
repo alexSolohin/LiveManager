@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class GoalPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private TextMeshProUGUI goalName;
+
+    private TaskPanel tasksPanel;
+    
+    private int id = 0;
+    public int ID
     {
-        
+        get { return id; }
+        set { id = value; }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void InitTaskPanel(TaskPanel panel)
     {
-        
+        tasksPanel = panel;
+        tasksPanel.gameObject.SetActive(false);
+    }
+
+    public void SetActiveTaskPanel(bool state)
+    {
+        tasksPanel.gameObject.SetActive(state);
+    }
+    public void SetGoalName(string text)
+    {
+        goalName.text = text;
     }
 }
