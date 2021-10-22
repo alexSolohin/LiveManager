@@ -29,7 +29,7 @@ public static class JsonHelper {
     {
         if (File.Exists(SaveDirectory.Path + fileName + ".json"))
         {
-        	Debug.Log(fileName + " Exist");
+            Debug.Log(fileName + " Exist");
         	return false;
         }
         var file = File.CreateText(SaveDirectory.Path + fileName + ".json");

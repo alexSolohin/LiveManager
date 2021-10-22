@@ -30,4 +30,28 @@ public class GoalPanel : MonoBehaviour
     {
         goalName.text = text;
     }
+
+    
+    // not use
+    public void OnPointerDown()
+    {
+        StartCoroutine(StartTimer());
+    }
+
+    public void OnPointerUp()
+    {
+        StopAllCoroutines();
+    }
+
+    private float time = 0;
+    private IEnumerator StartTimer()
+    {
+        while (time <= 1f)
+        {
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        time = 0;
+    }
 }
