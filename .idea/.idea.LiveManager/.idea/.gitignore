@@ -1,13 +1,3 @@
-# Default ignored files
-/shelf/
-/workspace.xml
-# Rider ignored files
-/modules.xml
-/contentModel.xml
-/projectSettingsUpdater.xml
-/.idea.LiveManager.iml
-# Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
-# Editor-based HTTP Client requests
-/httpRequests/
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bfc76c651ad7027d58f467e56cc79132fdb7ab465e56e1c8c0251cfe78d3e7a
+size 280
